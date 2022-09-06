@@ -1,0 +1,56 @@
+@import "../../scss/main.scss";
+
+.topbar-wrapper {
+  position: relative;
+  background-color: $clr-dark;
+  z-index: 999;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: -0%;
+    top: 100%;
+    z-index: 10;
+    display: block;
+    height: 40px;
+    background-size: 40px 100%;
+    background-image: linear-gradient(135deg, $clr-dark 25%, transparent 25%),
+      linear-gradient(225deg, $clr-dark 25%, transparent 25%);
+    background-position: 0 0;
+  }
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  position: relative;
+}
+
+.logo {
+  position: relative;
+  max-width: 300px;
+  top: 40px;
+  left: 0;
+  z-index: 99;
+}
+
+.nav {
+  &__list {
+    display: flex;
+    gap: 3rem;
+    list-style-type: none;
+    color: $clr-white;
+    font-family: $ff-main;
+    font-weight: 400;
+  }
+
+  &__item {
+    span {
+      color: $clr-accent;
+      font-weight: 300;
+    }
+  }
+}
