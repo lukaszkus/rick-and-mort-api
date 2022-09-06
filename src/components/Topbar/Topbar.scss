@@ -25,16 +25,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 70px;
   position: relative;
 }
 
 .logo {
   position: relative;
-  max-width: 300px;
+  max-width: 280px;
   top: 40px;
   left: 0;
   z-index: 99;
+  filter: drop-shadow(10px 10px 20px #1f282e);
 }
 
 .nav {
