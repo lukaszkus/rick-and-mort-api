@@ -1,0 +1,80 @@
+.portal-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(
+    circle farthest-side at 50% 50%,
+    rgba(102, 255, 0, 0.8),
+    rgba(0, 0, 0, 0) 45vmin,
+    rgba(0, 0, 0, 0)
+  );
+  overflow: hidden;
+}
+
+// #84ec3f
+
+.portal {
+  height: 80vmin;
+  pointer-events: none;
+  animation: float infinite 1.2s ease-in-out alternate-reverse;
+}
+
+@mixin transform {
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .portal {
+    @include transform;
+  }
+  #white {
+    animation: portal-spin infinite 90s linear;
+    @include transform;
+    fill: #fefefe;
+    filter: blur(1px);
+  }
+  #dark-green {
+    animation: portal-spin infinite 30s linear;
+    @include transform;
+    fill: #07b12c;
+    filter: blur(2px);
+  }
+  #green {
+    animation: portal-spin infinite 50s linear;
+    @include transform;
+    fill: #47d826;
+    filter: blur(3px);
+  }
+  #light-green {
+    animation: portal-spin infinite 70s linear;
+    @include transform;
+    fill: transparent;
+    filter: blur(1px);
+  }
+}
+
+@keyframes portal-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(-2px);
+  }
+  to {
+    transform: translateY(2px);
+  }
+}

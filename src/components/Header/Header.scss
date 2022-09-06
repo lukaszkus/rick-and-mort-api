@@ -1,0 +1,23 @@
+@import "../../scss/main.scss";
+
+.header-wrapper {
+  background-color: $clr-very-dark;
+}
+
+.header {
+  position: relative;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__title {
+    color: $clr-white;
+    font-family: $ff-main;
+    font-size: 5rem;
+    font-weight: 800;
+    max-width: 650px;
+    line-height: 1.2;
+    z-index: 99;
+  }
+}
