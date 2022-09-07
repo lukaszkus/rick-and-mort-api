@@ -1,4 +1,5 @@
 import React from "react";
+// import { motion } from "framer-motion";
 
 import "./Header.scss";
 import morty from "../../assets/morty.webp";
@@ -13,8 +14,10 @@ const Header = () => {
         <header className="header">
           <h1 className="header__title">Rick and Morty cool title.</h1>
           <button className="header__cta">Discover more</button>
-          <img className="rick" src={rick} alt="rick" />
-          <img className="morty" src={morty} alt="morty" />
+          <div className="characters">
+            <img className="morty" src={morty} alt="morty" />
+            <img className="rick" src={rick} alt="rick" />
+          </div>
           <Portal />
         </header>
       </div>
