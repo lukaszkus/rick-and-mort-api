@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  overflow-y: hidden;
+  // overflow: hidden;
 
   &__title {
     color: $clr-white;
@@ -45,45 +45,20 @@
   }
 }
 
-.characters {
-  position: absolute;
-  bottom: 0;
-  right: 10%;
-  z-index: 99;
-}
-
 .morty {
   position: absolute;
   z-index: 2;
   bottom: 0;
-  left: -10%;
+  right: 30%;
   height: 50vmin;
   filter: drop-shadow(-10px 0px 20px #1f282e);
 }
 
 .rick {
-  position: relative;
+  position: absolute;
   z-index: 1;
-  bottom: -10px;
+  bottom: 0;
   right: 0;
   height: 80vmin;
   filter: drop-shadow(-10px 0px 20px #1f282e);
 }
-
-// .morty {
-//   position: absolute;
-//   z-index: 2;
-//   bottom: 0;
-//   right: 26vw;
-//   height: 50vmin;
-//   filter: drop-shadow(-10px 0px 20px #1f282e);
-// }
-
-// .rick {
-//   position: absolute;
-//   z-index: 1;
-//   bottom: 0;
-//   right: 5vw;
-//   height: 80vmin;
-//   filter: drop-shadow(-10px 0px 20px #1f282e);
-// }
