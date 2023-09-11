@@ -14,10 +14,8 @@ const Header = () => {
         <header className="header">
           <h1 className="header__title">Rick and Morty cool title.</h1>
           <button className="header__cta">Discover more</button>
-          <div className="characters">
-            <img className="morty" src={morty} alt="morty" />
-            <img className="rick" src={rick} alt="rick" />
-          </div>
+          <img className="morty" src={morty} alt="morty" />
+          <img className="rick" src={rick} alt="rick" />
           <Portal />
         </header>
       </div>
